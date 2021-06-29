@@ -6,11 +6,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <a href="/" className="navbar-link">
-        <FaGithubAlt className="navbar-icons"/>
+        <FaGithubAlt className="navbar-icons" />
         <h2 className="navbar-heading">TopRepos</h2>
       </a>
       <a href="/" className="navbar-link">
-        <FaGitAlt className="navbar-icons"/>
+        <FaGitAlt className="navbar-icons" />
         <h2 className="navbar-heading">Fork</h2>
       </a>
     </nav>
