@@ -11,13 +11,13 @@ const langaugeDB = [
   },
   {
     id: 3,
-    name: 'Java',
-    logo: 'https://img.icons8.com/color/2x/java-coffee-cup-logo.png',
+    name: 'C++',
+    logo: 'https://img.icons8.com/color/2x/c-plus-plus-logo.png',
   },
   {
     id: 4,
-    name: 'C++',
-    logo: 'https://img.icons8.com/color/2x/c-plus-plus-logo.png',
+    name: 'Java',
+    logo: 'https://img.icons8.com/color/2x/java-coffee-cup-logo.png',
   },
   {
     id: 5,
@@ -29,16 +29,16 @@ const langaugeDB = [
     name: 'Kotlin',
     logo: 'https://img.icons8.com/color/2x/kotlin.png',
   },
-  {
-    id: 7,
-    name: 'Swift',
-    logo: 'https://img.icons8.com/fluent/2x/swift.png',
-  },
-  {
-    id: 8,
-    name: 'Dart',
-    logo: 'https://img.icons8.com/color/2x/dart.png',
-  }
+  // {
+  //   id: 7,
+  //   name: 'Swift',
+  //   logo: 'https://img.icons8.com/fluent/2x/swift.png',
+  // },
+  // {
+  //   id: 8,
+  //   name: 'Dart',
+  //   logo: 'https://img.icons8.com/color/2x/dart.png',
+  // }
 ]
 
 export default langaugeDB;
