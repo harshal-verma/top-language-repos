@@ -38,6 +38,47 @@
   padding-right: 4px;
 }
 
+/* topics */
+.topic-section{
+  display: flex;
+  background-color: var(--clr-primary-2);
+  padding-right: 40px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.topic-list{
+  text-decoration: none;
+  display: flex;
+  margin: 32px auto;
+}
+
+.topic-list li{
+  display: inline;
+  margin: 0px 8px;
+}
+
+.topic-btn{
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.topic-btn h4{
+  color: var(--clr-primary-1);
+}
+
+.topic-btn h4:hover{
+  color: var(--clr-orange);
+}
+
+.topic-logo{
+  width: 100%;
+  height: auto;
+}
+
+
 /* footer */
 .footer{
   text-align: center;
