@@ -1,12 +1,12 @@
 const langaugeDB = [
   {
     id: 1,
-    name: 'JavaScript',
+    name: 'javascript',
     logo: 'https://img.icons8.com/color/2x/javascript.png',
   },
   {
     id: 2,
-    name: 'Python',
+    name: 'python',
     logo: 'https://img.icons8.com/color/2x/python.png',
   },
   {
@@ -16,7 +16,7 @@ const langaugeDB = [
   },
   {
     id: 4,
-    name: 'Java',
+    name: 'java',
     logo: 'https://img.icons8.com/color/2x/java-coffee-cup-logo.png',
   },
   {
@@ -26,7 +26,7 @@ const langaugeDB = [
   },
   {
     id: 6,
-    name: 'Kotlin',
+    name: 'kotlin',
     logo: 'https://img.icons8.com/color/2x/kotlin.png',
   },
   // {

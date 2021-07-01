@@ -42,7 +42,6 @@
 /* topics */
 .topic-section{
   background-color: var(--clr-primary-2);
-  flex-direction: column;
   padding: 1px 0px 20px 0px;
 }
 
@@ -133,4 +132,15 @@
 
 .footer-para a:hover{
   color: var(--clr-orange);
+}
+
+/* single repos */
+.single-repo{
+  border: 1px black solid;
+  width: 500px;
+}
+
+.single-repo-flex{
+  display: flex;
+  justify-content: space-between;
 }
