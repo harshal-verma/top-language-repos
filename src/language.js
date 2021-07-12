@@ -1,32 +1,38 @@
 const langaugeDB = [
   {
     id: 1,
-    name: 'javascript',
+    name: 'JavaScript',
+    lang: 'javascript',
     logo: 'https://img.icons8.com/color/2x/javascript.png',
   },
   {
     id: 2,
-    name: 'python',
+    name: 'Python',
+    lang: 'python',
     logo: 'https://img.icons8.com/color/2x/python.png',
   },
   {
     id: 3,
     name: 'C++',
+    lang: 'cpp',
     logo: 'https://img.icons8.com/color/2x/c-plus-plus-logo.png',
   },
   {
     id: 4,
-    name: 'java',
-    logo: 'https://img.icons8.com/color/2x/java-coffee-cup-logo.png',
-  },
-  {
-    id: 5,
     name: 'C',
+    lang: 'c',
     logo: 'https://img.icons8.com/color/2x/c-programming.png',
   },
   {
+    id: 5,
+    name: 'Java',
+    lang: 'java',
+    logo: 'https://img.icons8.com/color/2x/java-coffee-cup-logo.png',
+  },
+  {
     id: 6,
-    name: 'kotlin',
+    name: 'Kotlin',
+    lang: 'kotlin',
     logo: 'https://img.icons8.com/color/2x/kotlin.png',
   },
   // {
