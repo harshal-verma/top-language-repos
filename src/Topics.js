@@ -60,7 +60,7 @@ const Topics = () => {
            return <div 
            key = {index}
            className="single-repo">
-               <h2><RiGitRepositoryFill/> {repos.name}</h2>
+               <a href={repos.html_url}><h2><RiGitRepositoryFill/> {repos.name}</h2></a>
                <div className="single-repo-flex">
                <p><GoCode/> {language}</p>
                <div><GoRepoForked style={{
@@ -70,8 +70,8 @@ const Topics = () => {
                }}/> {repos.stargazers_count}</div>
                </div>
                <p className="repo-description">{repos.description}</p>
-               <div className="single-repo-flex">
-               <h3><a href = {repos.html_url}><RiUser3Line/>{repos.name}</a></h3>
+               <div className="single-repo-flex calendar">
+               <p><a href = {repos.html_url}><RiUser3Line/>{repos.name}</a></p>
                <div><GoCalendar/>{repos.created_at}</div>
                </div>
                <a href={repos.homepage}><p><GoLink />{repos.homepage}</p></a>
