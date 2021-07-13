@@ -4,12 +4,12 @@
   --clr-orange: #EE9078;
   --clr-grey: #AAAAAA;
   --clr-white: #ffffff;
-  
-    --clr-dark-purple: #210814;
-    --clr-light-purple: #3C2A3A;
-    --clr-repo-purple: #332331;
-    --clr-new-orange: #f9a63a;
-    --link-hover-color: #d63af9;
+  /* new */
+  --clr-dark-purple: #210814;
+  --clr-light-purple: #3C2A3A;
+  --clr-repo-purple: #332331;
+  --clr-new-orange: #f9a63a;
+  --link-hover-color: #d63af9;
  
 }
 
@@ -54,16 +54,17 @@
 /* topics */
 .topic-section{
   background-color: var(--clr-light-purple);
-  padding: 1px 0px 20px 0px;
+  padding: 0px 10px;
 }
 
 .topic-section h2{
-  color: var(--clr-primary-1);
-  padding: 0px 10px;
+  color: var(--clr-white);
+  padding: 24px 10px;
   font-weight: 400;
 }
 
 .topic-list{
+  padding: 0px 0px 24px;
   text-decoration: none;
   margin-block-start: 0px;
   margin-block-end: 0px;
@@ -79,10 +80,9 @@
 
 .topic-btn{
   background-color: transparent;
-  border: 1px solid white;
+  border: 1px solid var(--clr-white);
   border-radius: 5px;
   cursor: pointer;
-  z-index: 2;
 }
 
 .topic-btn h4{
@@ -106,8 +106,8 @@
 .footer{
   text-align: center;
   color: var(--clr-grey);
-  background-color: var(--clr-primary-1);
-  padding: 8px 16px;
+  background-color: var(--clr-dark-purple);
+  padding: 16px;
 }
 
 .footer-div{
@@ -116,24 +116,24 @@
 
 .footer-ul{
   list-style: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  padding: 16px 0px;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
-  padding-inline-start: 0;
+  padding-inline-start: 0px;
 }
 
 .footer-ul li{
   display: inline;
-  color: var(--clr-primary-2);
 }
 
 .footer-ul a{
-  color: var(--clr-primary-2);
+  color: var(--clr-new-orange);
 }
 
 .footer-ul a:hover{
-  color: var(--clr-orange);
+  color: var(--link-hover-color);
 }
 
 .footer-icon{
@@ -147,11 +147,11 @@
 
 .footer-para a{
   text-decoration: none;
-  color: var(--clr-primary-2);
+  color: var(--clr-new-orange);
 }
 
 .footer-para a:hover{
-  color: var(--clr-orange);
+  color: var(--link-hover-color);
 }
 
 /* single repos */
@@ -161,7 +161,7 @@
   padding: 12px 16px;
   row-gap: 16px;
   column-gap: 8px;
-  background-color: var(--clr-primary-2);
+  background-color: var(--clr-light-purple);
 }
 
 .single-repo{
@@ -169,7 +169,7 @@
   width: 90%;
   height: 220px;
   padding: 4px 8px 0px;
-  background-color: #17db9d;
+  background-color: var(--clr-repo-purple);
   display: flex;
   flex-direction: column;
   min-height: 100%;
@@ -180,7 +180,7 @@
 }
 
 .single-repo h2 , h3 , p , a{
-  color: var(--clr-orange);
+  color: var(--clr-new-orange);
   font-size: 14px;
 }
 
@@ -229,4 +229,5 @@
 
 .homepage-link p{
   font-size: 12px;
+  color: var(--clr-new-orange);
 }
