@@ -35,16 +35,16 @@ const langaugeDB = [
     lang: 'kotlin',
     logo: 'https://img.icons8.com/color/2x/kotlin.png',
   },
-  // {
-  //   id: 7,
-  //   name: 'Swift',
-  //   logo: 'https://img.icons8.com/fluent/2x/swift.png',
-  // },
-  // {
-  //   id: 8,
-  //   name: 'Dart',
-  //   logo: 'https://img.icons8.com/color/2x/dart.png',
-  // }
+  {
+    id: 7,
+    name: 'Swift',
+    logo: 'https://img.icons8.com/fluent/2x/swift.png',
+  },
+  {
+    id: 8,
+    name: 'Dart',
+    logo: 'https://img.icons8.com/color/2x/dart.png',
+  }
 ]
 
 export default langaugeDB;

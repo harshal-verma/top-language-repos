@@ -61,20 +61,18 @@ const Topics = () => {
            key = {index}
            className="single-repo">
                <a href={repos.html_url}><h2><RiGitRepositoryFill/> {repos.name}</h2></a>
+               <div className="wrapper">
                <div className="single-repo-flex">
                <p><GoCode/> {language}</p>
-               <div><GoRepoForked style={{
-                   color: "#fff"
-               }}/> {repos.forks_count} <RiStarSLine style={{
-                   color: "#fff"
-               }}/> {repos.stargazers_count}</div>
+               <div><GoRepoForked/> {repos.forks_count} <RiStarSLine/> {repos.stargazers_count}</div>
                </div>
                <p className="repo-description">{repos.description}</p>
                <div className="single-repo-flex calendar">
                <p><a href = {repos.html_url}><RiUser3Line/>{repos.name}</a></p>
-               <div><GoCalendar/>{repos.created_at}</div>
+               <div><GoCalendar/> {repos.updated_at}</div>
                </div>
-               <a href={repos.homepage}><p><GoLink />{repos.homepage}</p></a>
+               </div>
+               <a href={repos.homepage || `/`} className="homepage-link"><p><GoLink /> {repos.homepage || 'website is not available'}</p></a>
             </div>
        })} 
     </section>
