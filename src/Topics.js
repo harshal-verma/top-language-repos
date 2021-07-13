@@ -1,5 +1,7 @@
 import React , { useState , useEffect } from 'react';
 import { RiGitRepositoryFill, RiStarSLine, RiUser3Line } from "react-icons/ri";
+import { BsGrid } from "react-icons/bs"
+import { FaListUl } from "react-icons/fa"
 import { GoRepoForked, GoCode, GoLink, GoCalendar} from "react-icons/go"
 import langaugeDB from './language';
 import axios from "axios";
@@ -29,9 +31,19 @@ const Topics = () => {
     }, [language])
     console.log(data);
     console.log(language)
+
+    const gridOnClickHandler = () => {
+        
+    }
+
+    const listOnClickHandler = () => {
+
+    }
+
     if(loading){
         return <h2>loading rn...</h2>
     }
+
     return <React.Fragment>
     <section className
     ="topic-section">
@@ -54,6 +66,19 @@ const Topics = () => {
          </li>
      })}
     </ul>
+    <div className="repo-header">
+       <div className="repo-header-intro">
+           <h2 style = {{
+               textTransform: "capitalize",
+           }}>{language} repositories</h2>
+           <p>Showing popular repositories (max: 30) based on star count.
+           </p>
+       </div>
+       <div>
+           <button onClick = {() => gridOnClickHandler()}><BsGrid /></button>
+           <button onClick = {() => listOnClickHandler()}><FaListUl /></button>
+       </div>
+    </div>
     </section>
     <section className="all-repos">
     {data.map((repos , index) => {

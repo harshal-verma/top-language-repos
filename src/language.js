@@ -35,6 +35,18 @@ const langaugeDB = [
     lang: 'kotlin',
     logo: 'https://img.icons8.com/color/2x/kotlin.png',
   },
+  {
+    id: 7,
+    name: 'C#',
+    lang: 'csharp',
+    logo: 'https://img.icons8.com/color/2x/c-sharp-logo.png'
+  },
+  {
+    id: 8,
+    name: 'Ruby',
+    lang: 'ruby',
+    logo: 'https://img.icons8.com/color/2x/ruby-programming-language.png',
+  }
 ]
 
 export default langaugeDB;
