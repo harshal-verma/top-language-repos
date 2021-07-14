@@ -12,6 +12,7 @@ const Topics = () => {
     const [error , setError] = useState(true);
     const [data , setData] = useState([]);
     const [gridView , setGridView] = useState(true);
+    const [showMore , setShowMore] = useState(false)
 
     const urlGenerator = (language) => {
         return 'https://api.github.com/search/repositories?q=language:' + language + '&sort=stars&order=desc';
@@ -66,8 +67,8 @@ const Topics = () => {
            </p>
        </div>
        <div className="repo-header-btn">
-           <BsGrid title = "Grid View" onClick = {() => (setGridView(true))} className = "grid-btn"/>
-           <FaListUl title = "List View" onClick = {() => (setGridView(false))} className = "list-btn"/>
+           <BsGrid title = "Grid View" onClick = {() => (setGridView(true))} className = {`grid-btn  ${gridView ? "grid-orange-btn" : null}`}/>
+           <FaListUl title = "List View" onClick = {() => (setGridView(false))} className = {`list-btn  ${gridView ? null : "list-orange-btn"}`} />
        </div>
     </div>
     </section>
@@ -92,7 +93,7 @@ const Topics = () => {
             </div>
        })} 
     </section>
-    <div className = "show-more-btn"><button>Show more</button></div>
+    <div className = "show-more-btn" onClick = {() => setShowMore(!showMore)}><button>{showMore ? "Show Less" : "Show More"}</button></div>
     </React.Fragment>
 }
 
