@@ -1,5 +1,5 @@
 import React , { useState , useEffect } from 'react';
-import { RiGitRepositoryFill, RiStarSLine, RiUser3Line } from "react-icons/ri";
+import { RiBodyScanFill, RiGitRepositoryFill, RiStarSLine, RiUser3Line } from "react-icons/ri";
 import { BsGrid } from "react-icons/bs"
 import { FaListUl } from "react-icons/fa"
 import { GoRepoForked, GoCode, GoLink, GoCalendar} from "react-icons/go"
@@ -11,6 +11,7 @@ const Topics = () => {
     const [loading , setLoading] = useState(false);
     const [error , setError] = useState(true);
     const [data , setData] = useState([]);
+    const [gridView , setGridView] = useState(true);
 
     const urlGenerator = (language) => {
         return 'https://api.github.com/search/repositories?q=language:' + language + '&sort=stars&order=desc';
@@ -32,16 +33,12 @@ const Topics = () => {
     console.log(data);
     console.log(language)
 
-    const gridOnClickHandler = () => {
-        
-    }
-
-    const listOnClickHandler = () => {
-
-    }
-
     if(loading){
-        return <h2>loading rn...</h2>
+        return (
+            <div className = "loader">
+                <img src = "https://media1.tenor.com/images/672b62d967f8d00d608d22f36c1831db/tenor.gif?itemid=5388999" alt = "loading..."/>
+            </div>
+        )
     }
 
     return <React.Fragment>
@@ -54,11 +51,7 @@ const Topics = () => {
          return <li key={id}>
          <button 
          id={`${lang}`}
-         onClick = {() => 
-            {
-                setLanguage(lang);
-            }
-        }
+         onClick = {() => setLanguage(lang)}
          className="topic-btn">        
          <figure><img src={logo} alt={name} className="topic-logo"/></figure>
          <h4>{name}</h4>     
@@ -68,19 +61,17 @@ const Topics = () => {
     </ul>
     <div className="repo-header">
        <div className="repo-header-intro">
-           <h2 style = {{
-               textTransform: "capitalize",
-           }}>{language} repositories</h2>
+           <h2>{language} repositories</h2>
            <p>Showing popular repositories (max: 30) based on star count.
            </p>
        </div>
-       <div>
-           <button onClick = {() => gridOnClickHandler()}><BsGrid /></button>
-           <button onClick = {() => listOnClickHandler()}><FaListUl /></button>
+       <div className="repo-header-btn">
+           <BsGrid title = "Grid View" onClick = {() => (setGridView(true))} className = "grid-btn"/>
+           <FaListUl title = "List View" onClick = {() => (setGridView(false))} className = "list-btn"/>
        </div>
     </div>
     </section>
-    <section className="all-repos">
+    <section className = {gridView ? "grid-view" : "list-view"}>
     {data.map((repos , index) => {
            return <div 
            key = {index}
@@ -93,14 +84,15 @@ const Topics = () => {
                </div>
                <p className="repo-description">{repos.description}</p>
                <div className="single-repo-flex calendar">
-               <p><a href = {repos.html_url}><RiUser3Line/>{repos.name}</a></p>
+               <p><a href = {repos.html_url} title = "Owner"><RiUser3Line/>{repos.name}</a></p>
                <div><GoCalendar/> {repos.updated_at}</div>
                </div>
                </div>
-               <a href={repos.homepage || `/`} className="homepage-link"><p><GoLink /> {repos.homepage || 'website is not available'}</p></a>
+               <a href= {repos.homepage || `/`} className="homepage-link" title = {repos.homepage ? "Project Homepage" : ""}><p><GoLink /> {repos.homepage || 'website is not available'}</p></a>
             </div>
        })} 
     </section>
+    <div className = "show-more-btn"><button>Show more</button></div>
     </React.Fragment>
 }
 

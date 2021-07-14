@@ -9,7 +9,7 @@ const Navbar = () => {
         <FaGithubAlt className="navbar-icons" />
         <h2 className="navbar-heading">TopRepos</h2>
       </a>
-      <a href="/" className="navbar-link">
+      <a href="https://github.com/harshal-verma/top-repos" className="navbar-link">
         <FaGitAlt className="navbar-icons" />
         <h2 className="navbar-heading">Fork</h2>
       </a>
