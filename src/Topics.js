@@ -15,20 +15,19 @@ const Topics = () => {
     const urlGenerator = (language) => {
         return 'https://api.github.com/search/repositories?q=language:' + language + '&sort=stars&order=desc';
     }
-    const getData = async () => {
-        setLoading(true);
-        axios({
-            method: "get",
-            url: urlGenerator(language),
-        }).then(res => {
-            setData([...res.data.items])
-            setLoading(false);
-        })
-    }
     useEffect(() => {
-    //    fetchAPI();
+        const getData = async () => {
+            setLoading(true);
+            axios({
+                method: "get",
+                url: urlGenerator(language),
+            }).then(res => {
+                setData([...res.data.items])
+                setLoading(false);
+            })
+        }
        getData();
-    }, [language])
+    } , [language])
     console.log(data);
     console.log(language)
 
