@@ -89,7 +89,7 @@ body{
 
 .topic-btn{
   padding: 8px;
-  width: 150px;
+  width: 12vw;
   background-color: transparent;
   border: 1px solid var(--clr-white);
   border-radius: 5px;
@@ -261,6 +261,10 @@ body{
   color: var(--link-hover-color);
 }
 
+.stars{
+  padding: 8px 0px;
+}
+
 .single-repo div{
   font-size: 14px;
 }
@@ -284,7 +288,7 @@ body{
 }
 
 .calendar{
-  padding-bottom: 4px;
+  padding: 8px 0px;
 }
 
 .single-repo p{

@@ -80,7 +80,7 @@ const Topics = () => {
                <a href={repos.html_url}
                className = "single-repo-name"><h2><RiGitRepositoryFill/> {repos.name}</h2></a>
                <div className="wrapper">
-               <div className="single-repo-flex">
+               <div className="single-repo-flex stars">
                <p><GoCode/> {language}</p>
                <div><GoRepoForked/> {repos.forks_count} <RiStarSLine/> {repos.stargazers_count}</div>
                </div>
