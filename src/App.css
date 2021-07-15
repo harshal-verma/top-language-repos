@@ -226,7 +226,6 @@ body{
 }
 
 .single-repo{
-  border: 1px black solid;
   width: 98%;
   height: 220px;
   padding: 4px 8px 0px;
@@ -344,3 +343,37 @@ body{
   display: block;
   margin: 10% auto;
 } 
+
+/* responsiveness */
+
+@media screen and (max-width: 960px){
+  .topic-btn{
+    width: 150px;
+  }
+  .grid-view{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+
+@media screen and (max-width: 769px){
+  .grid-view{
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+  }
+}
+
+@media screen and (max-width: 575px){
+  .list-btn{
+    display: none;
+  }
+
+  .grid-btn{
+    display: none;
+  }
+
+  .grid-view{
+    display: grid;
+    grid-template-columns: repeat(1 , 1fr);
+  }
+}

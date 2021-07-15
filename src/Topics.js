@@ -9,7 +9,6 @@ import axios from "axios";
 const Topics = () => {
     const [language , setLanguage] = useState('javascript');
     const [loading , setLoading] = useState(false);
-    const [error , setError] = useState(true);
     const [data , setData] = useState([]);
     const [gridView , setGridView] = useState(true);
     const [showMore , setShowMore] = useState(false)
@@ -87,14 +86,14 @@ const Topics = () => {
                <p className="repo-description">{repos.description ? repos.description : "no description available"}</p>
                <div className="single-repo-flex calendar">
                <p><a href = {repos.html_url} title = "Owner"><RiUser3Line/>{repos.name}</a></p>
-               <div><GoCalendar/> {repos.updated_at}</div>
+               <div title = "Updated at"><GoCalendar/> {repos.updated_at.substring(0,10)}</div>
                </div>
                </div>
                <a href= {repos.homepage || `/`} className="homepage-link" title = {repos.homepage ? "Project Homepage" : ""}><p><GoLink /> {repos.homepage || 'website is not available'}</p></a>
             </div>
        })} 
     </section>
-    <div className = "show-more-btn" onClick = {() => setShowMore(!showMore)}><button>{showMore ? "Show Less" : "Show More"}</button></div>
+    {/*<div className = "show-more-btn" onClick = {() => setShowMore(!showMore)}><button>{showMore ? "Show Less" : "Show More"}</button></div> */}
     </React.Fragment>
 }
 
