@@ -1,5 +1,5 @@
 import React , { useState , useEffect } from 'react';
-import { RiBodyScanFill, RiGitRepositoryFill, RiStarSLine, RiUser3Line } from "react-icons/ri";
+import { RiGitRepositoryFill, RiStarSLine, RiUser3Line } from "react-icons/ri";
 import { BsGrid } from "react-icons/bs"
 import { FaListUl } from "react-icons/fa"
 import { GoRepoForked, GoCode, GoLink, GoCalendar} from "react-icons/go"
@@ -11,7 +11,6 @@ const Topics = () => {
     const [loading , setLoading] = useState(false);
     const [data , setData] = useState([]);
     const [gridView , setGridView] = useState(true);
-    const [showMore , setShowMore] = useState(false)
 
     const urlGenerator = (language) => {
         return 'https://api.github.com/search/repositories?q=language:' + language + '&sort=stars&order=desc';
