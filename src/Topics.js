@@ -77,13 +77,14 @@ const Topics = () => {
            return <div 
            key = {index}
            className="single-repo">
-               <a href={repos.html_url}><h2><RiGitRepositoryFill/> {repos.name}</h2></a>
+               <a href={repos.html_url}
+               className = "single-repo-name"><h2><RiGitRepositoryFill/> {repos.name}</h2></a>
                <div className="wrapper">
                <div className="single-repo-flex">
                <p><GoCode/> {language}</p>
                <div><GoRepoForked/> {repos.forks_count} <RiStarSLine/> {repos.stargazers_count}</div>
                </div>
-               <p className="repo-description">{repos.description}</p>
+               <p className="repo-description">{repos.description ? repos.description : "no description available"}</p>
                <div className="single-repo-flex calendar">
                <p><a href = {repos.html_url} title = "Owner"><RiUser3Line/>{repos.name}</a></p>
                <div><GoCalendar/> {repos.updated_at}</div>

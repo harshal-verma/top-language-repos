@@ -85,12 +85,11 @@ body{
 
 .topic-list li{
   margin: 0px 14px;
-
 }
 
 .topic-btn{
   padding: 8px;
-  width: 12vw;
+  width: 150px;
   background-color: transparent;
   border: 1px solid var(--clr-white);
   border-radius: 5px;
@@ -250,6 +249,18 @@ body{
   text-decoration: none;
 }
 
+.single-repo-name h2{
+  padding: 0px 0px 8px;
+}
+
+.single-repo-name h2:hover{
+  color: var(--link-hover-color); 
+}
+
+.single-repo a:hover{
+  color: var(--link-hover-color);
+}
+
 .single-repo div{
   font-size: 14px;
 }
@@ -262,6 +273,8 @@ body{
 .single-repo .repo-description{
   color: var(--clr-white);
   margin: 12px 0px;
+  height: 4rem;
+  overflow: hidden;
 }
 
 .single-repo h2{
@@ -271,7 +284,6 @@ body{
 }
 
 .calendar{
-  border-bottom: var(--clr-white) 1px dashed;
   padding-bottom: 4px;
 }
 
@@ -286,12 +298,17 @@ body{
 }
 
 .homepage-link{
-  padding: 8px 0px 0px;
+  border-top: var(--clr-white) 1px dashed;
+  padding: 8px 0px;
 }
 
 .homepage-link p{
   font-size: 12px;
   color: var(--clr-new-orange);
+}
+
+.homepage-link p:hover{
+  color: var(--link-hover-color);
 }
 
 .show-more-btn{
