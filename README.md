@@ -1,1 +1,1 @@
-A project using GitHub API to display 30 most popular repositories of a selected topic . You can change the display layout from cardview and listview . It uses ReactJS , GitHub API and axios . It is deployed using Netlify .
+A project using GitHub API to display 30 most popular repositories of a selected language . You can change the display layout from cardview and listview . It uses ReactJS , GitHub API and axios . It is deployed using Netlify .
