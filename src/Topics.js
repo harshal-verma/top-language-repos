@@ -28,8 +28,7 @@ const Topics = () => {
         }
        getData();
     } , [language])
-    console.log(data);
-    console.log(language)
+
 
     if(loading){
         return (
